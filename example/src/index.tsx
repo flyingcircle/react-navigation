@@ -52,6 +52,7 @@ import DynamicTabs from './Screens/DynamicTabs';
 import AuthFlow from './Screens/AuthFlow';
 import CompatAPI from './Screens/CompatAPI';
 import SettingsItem from './Shared/SettingsItem';
+import CustomDrawerContent from './Screens/CustomDrawerContent';
 
 YellowBox.ignoreWarnings(['Require cycle:', 'Warning: Async Storage']);
 
@@ -216,7 +217,7 @@ export default function App() {
         }
         theme={theme}
       >
-        <Drawer.Navigator>
+        <Drawer.Navigator drawerContent={props => CustomDrawerContent(props)}>
           <Drawer.Screen
             name="Root"
             options={{
