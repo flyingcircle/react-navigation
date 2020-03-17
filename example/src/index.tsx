@@ -217,7 +217,9 @@ export default function App() {
         }
         theme={theme}
       >
-        <Drawer.Navigator drawerContent={props => CustomDrawerContent(props)}>
+        <Drawer.Navigator
+          drawerContent={props => <CustomDrawerContent {...props} />}
+        >
           <Drawer.Screen
             name="Root"
             options={{
